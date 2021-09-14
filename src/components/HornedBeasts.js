@@ -42,9 +42,9 @@ class HornedBeasts extends React.Component {
                 <img onClick={this.increaseNumberOfPets} src={this.props.catImg} alt={this.props.catName} width={250} /> */}
 
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img className='cardCat' variant="top" src={this.props.image_url} alt={this.props.catName} />
+                    <Card.Img className='cardCat' variant="top" src={this.props.image_url} alt={this.props.title} />
                     <Card.Body>
-                        <Card.Title>{this.props.catName}</Card.Title>
+                        <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                             {this.props.description}--- 
                             Number of Pets {this.state.numOfPets}

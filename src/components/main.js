@@ -9,10 +9,13 @@ class main extends React.Component {
             <div className = "main">
                
    
-               { data.map((post,idx) =>{
+               {
+                data.map((post,idx) =>{
                 return(
                     <> 
-                      <HornedBeasts title={post.props} pargraph={post.description} url={post.image_url} key={idx} ></HornedBeasts>
+                      <HornedBeasts  url = {post.image_url}
+                title = {post.title}
+                description = {post.description}></HornedBeasts>
 
                     </>
    
@@ -25,5 +28,4 @@ class main extends React.Component {
    }
 }
 export default main;
-
 

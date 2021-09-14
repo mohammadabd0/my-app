@@ -15,7 +15,9 @@ class main extends React.Component {
                     <> 
                       <HornedBeasts  url = {post.image_url}
                 title = {post.title}
-                description = {post.description}></HornedBeasts>
+                description = {post.description}
+                key={idx}
+                index={idx}></HornedBeasts>
 
                     </>
    

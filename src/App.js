@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React from 'react';
 import Footer from './components/footer';
 import Header from './components/header';
@@ -9,11 +8,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header></Header>
+        <Header/>
 
-        <Main> </Main>
+        <Main/>
 
-        <Footer></Footer>
+        <Footer/>
 
       </>
     )

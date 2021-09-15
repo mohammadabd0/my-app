@@ -1,17 +1,4 @@
-// import React from "react";
 
-// class HornedBeasts extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//                 <h2>{this.props.title}</h2>
-//                 <img src={this.props.image_url} alt={this.props.keyword} title={this.props.horns} />
-//                 <p>{this.props.description}</p>
-//             </div>
-//         )
-//     }
-// }
-// export default HornedBeasts;
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
@@ -34,6 +21,10 @@ class HornedBeasts extends React.Component {
         })
     }
 
+    showpost = () => {
+        this.props.showthepost(this.props.title);
+    }
+
     render() {
         return (
             <div>
@@ -42,14 +33,16 @@ class HornedBeasts extends React.Component {
                 <img onClick={this.increaseNumberOfPets} src={this.props.catImg} alt={this.props.catName} width={250} /> */}
 
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img className='cardCat' variant="top" src={this.props.url} alt={this.props.title} />
+                    <Card.Img className='cardCat' variant="top" src={this.props.url} alt={this.props.title} onClick={this.showpost}/>
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
-                            {this.props.description}--- 
-                            Number of Pets {this.state.numOfPets}
+                        {this.props.description}
+                        
+                        {/* Number of Pets {this.state.numOfPets} */}
                         </Card.Text>
-                        <Button onClick={this.increaseNumberOfPets} variant="primary">vote</Button>
+                        
+                        <Button onClick={this.increaseNumberOfPets} variant="primary">vote {this.state.numOfPets}</Button>
                     </Card.Body>
                 </Card>
             </div>

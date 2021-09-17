@@ -35,7 +35,7 @@ class HornedBeasts extends React.Component {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img className='cardCat' variant="top" src={this.props.url} alt={this.props.title} onClick={this.showpost}/>
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Title>{this.props.title} </Card.Title>
                         <Card.Text>
                         {this.props.description}
                         
